@@ -1,0 +1,178 @@
+PROJECT(HOTEL MANAGEMENT)
+
+
+#include <stdio.h>
+#include <string.h>
+float gst;
+float total_price;
+float t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11;
+struct menucard
+{
+  char dish[100];
+  float price;
+  char available[100];
+};
+typedef struct menucard mc;
+int main ()
+{ 
+   printf("*********************************************************\n");
+   printf("\t \t \t M.s  E.r HOTEL\t \t \t \t\t\t\t\t\t\n");
+   printf("************************************************************\n");
+   printf("\t \t \tMENU CARD\n");
+   printf("1. Full Meals - Rs. 150\n");
+   printf("2. Briyani - Rs. 250\n");
+   printf("3. Fried Rice - Rs. 80\n");
+   printf("4. Noodles - Rs. 60\n");
+   printf("5. Egg Rice - Rs. 70\n");
+   printf("6. Fish Fry - Rs. 150\n");
+   printf("7. Mutten Chukka - Rs. 200\n");
+   printf("8. Thanthuri - Rs. 350\n");
+   printf("9. Chicken Lollipop - Rs. 100\n");
+   printf("10.Icecream - Rs. 30\n");
+   printf("11.Milkshake - Rs. 40\n");
+   int n,choice;
+   printf("How many dishes ?:");
+   scanf("%d",&n);
+   float price;
+   for(int i=0;i<n;i++)
+   {
+   printf("\nEnter your choice: ");
+   scanf("%d", &choice);
+   mc a[11]= {{"Full Meals", 150,18},
+             {"Briyani", 250,18},
+             {"Fried Rice",80,18},
+             {"Noodles", 60,18},
+             {"Egg Rice", 70,18},
+             {"Fish Fry", 150,18},
+             {"Mutten Chukka", 200,18},
+             {"Thanthuri", 350,18},
+             {"Chicken Lollipop", 100,18},
+             {"Icecream", 30,18},
+             {"Milkshake", 40,18}};
+
+   switch (choice)
+   {
+    case 1:
+      printf("\nYou have selected %s\n", a[0].dish);
+      printf("AVAILABLE AT 12:30PM\n");
+      price  = a[0].price;
+       printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t1= price + gst;
+      printf("Total price: Rs. %.2f\n", t1);
+      break;
+    case 2:
+      printf("\nYou have selected %s\n", a[1].dish);
+      printf("AVAILABLE FROM 9:00AM\n");
+      price  = a[1].price;
+      printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t2 = price + gst;
+      printf("Total price: Rs. %.2f\n", t2);
+      break;
+    case 3:
+      printf("\nYou have selected %s\n", a[2].dish);
+      printf("AVAILABLE FOR 10 PERSONS\n");
+      price = a[2].price;
+       printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t3 = price + gst;
+      printf("Total price: Rs. %.2f\n", t3);
+      break;
+    case 4:
+      printf("\nYou have selected %s\n", a[3].dish);
+      printf("AVAILABLE AT EVENING 5:30PM\n");
+      price = a[3].price;
+       printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t4 = price + gst;
+      printf("Total price: Rs. %.2f\n", t4);
+      break;
+    case 5:
+      printf("\nYou have selected %s\n", a[4].dish);
+      printf("AVAILABLE AT EVENING 5:30PM\n");
+      price = a[4].price;
+      printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t5 = price + gst;
+      printf("Total price: Rs. %.2f\n", t5);
+      break;
+    case 6:
+      printf("\nYou have selected %s\n", a[5].dish);
+      printf("AVAILABLE FOR 17 PERSONS\n");
+      price = a[5].price;
+      printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t6 = price + gst;
+      printf("Total price: Rs. %.2f\n", t6);
+      break;
+    case 7:
+      printf("\nYou have selected %s\n", a[6].dish);
+      printf("AVAILABLE FOR 13 PERSONS\n");
+      price = a[6].price;
+      printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t7 = price + gst;
+      printf("Total price: Rs. %.2f\n", t7);
+      break;
+    case 8:
+      printf("\nYou have selected %s\n", a[7].dish);
+      printf("AVAILABLE FOR 19 PERSONS\n");
+      price = a[7].price;
+      printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t8 = price + gst;
+      printf("Total price: Rs. %.2f\n", t8);
+      break;
+    case 9:
+      printf("\nYou have selected %s\n", a[8].dish);
+      printf("AVAILABLE FOR 13 PERSONS\n");
+      price = a[8].price;
+       printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t9 = price + gst;
+      printf("Total price: Rs. %.2f\n", t9);
+      break;
+    case 10:
+      printf("\nYou have selected %s\n", a[9].dish);
+      printf("AVAILABLE AT ANY TIME\n");
+      price = a[9].price;
+      printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t10 = price + gst;
+      printf("Total price: Rs. %.2f\n", t10);
+      break;
+    case 11:
+      printf("\nYou have selected %s\n", a[10].dish);
+      printf("AVAILABLE AT ANY TIME\n");
+      price = a[10].price;
+       printf("Price: Rs. %.2f\n", price);
+      gst = price * 0.18;
+      printf("GST (18%): Rs. %.2f\n", gst);
+      t11 = price + gst;
+      printf("Total price: Rs. %.2f\n", t11);
+      break;
+    default:
+      printf("\nInvalid choice\n");
+      break;
+  }
+}
+
+      printf("*********************************************************\n");
+      total_price=t1+t2+t3+t4+t5+t6+t7+t8+t9+t10+t11;
+      printf("Total price: Rs. %.2f\n", total_price);
+      printf("*********************************************************\n");
+      printf("\tTHANKS FOR ORDERING...\nDISCOVER THE ARTISTRY OF TASTE IN EVERY DISH");
+   return 0;
+
+}
